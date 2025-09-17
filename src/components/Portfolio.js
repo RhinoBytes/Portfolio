@@ -88,7 +88,7 @@ const Portfolio = () => {
               Full-stack developer who builds intuitive front-end experiences and scalable backend systems
             </p>
             <p className="text-lg mb-8 text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
-              Frontend-focused full-stack developer with a strong eye for clean design and seamless user interactions. Experienced in React, Next.js, and modern CSS frameworks, I craft performant interfaces that feel natural and responsive. As a backend team leader, I’ve also architected APIs, optimized databases, and mentored developers — bridging the gap between user experience and technical infrastructure. Based in Toronto, ON.
+              Frontend-focused full-stack developer with a strong eye for clean design and seamless user interactions. Experienced in React, Next.js, and modern CSS frameworks, I craft performant interfaces that feel natural and responsive. As a backend team leader, I’ve also architected APIs, optimized databases, and mentored developers, bridging the gap between user experience and technical infrastructure. Based in Toronto, ON.
             </p>
           </div>
 
@@ -120,7 +120,7 @@ const Portfolio = () => {
 
           <div className="max-w-4xl mx-auto">
             <p className="text-lg mb-6 text-gray-600 dark:text-gray-300">
-              I’m a passionate developer who thrives on solving complex challenges from both the front and back end. On the frontend, I specialize in building user-friendly, responsive interfaces that balance design and functionality. I pay attention to the details that make apps intuitive — from fluid navigation to accessible components.
+              I’m a passionate developer who thrives on solving complex challenges from both the front and back end. On the frontend, I specialize in building user-friendly, responsive interfaces that balance design and functionality. I pay attention to the details that make apps intuitive, from fluid navigation to accessible components.
             </p>
 
 
@@ -129,7 +129,7 @@ const Portfolio = () => {
             </p>
 
             <p className="text-lg mb-6 text-gray-600 dark:text-gray-300">
-              My approach combines UI/UX empathy with technical precision. I don’t just write code — I design systems and experiences that are reliable, performant, and enjoyable to use.
+              My approach combines UI/UX empathy with technical precision. I don’t just write code , I design systems and experiences that are reliable, performant, and enjoyable to use.
             </p>
 
             <p className="text-lg text-gray-600 dark:text-gray-300">
