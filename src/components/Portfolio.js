@@ -82,13 +82,13 @@ const Portfolio = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-500 to-blue-600 bg-clip-text text-transparent">
-              Douglas Ross
+              {"Douglas Ross"}
             </h1>
             <p className="text-xl sm:text-2xl mb-6 text-gray-600 dark:text-gray-300">
-              Full-stack developer who builds intuitive front-end experiences and scalable backend systems
+              {"Full - stack developer who builds intuitive front-end experiences and scalable backend systems"}
             </p>
             <p className="text-lg mb-8 text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
-              Frontend-focused full-stack developer with a strong eye for clean design and seamless user interactions. Experienced in React, Next.js, and modern CSS frameworks, I craft performant interfaces that feel natural and responsive. As a backend team leader, I’ve also architected APIs, optimized databases, and mentored developers, bridging the gap between user experience and technical infrastructure. Based in Toronto, ON.
+              {"Frontend-focused full-stack developer with a strong eye for clean design and seamless user interactions. Experienced in React, Next.js, and modern CSS frameworks, I craft performant interfaces that feel natural and responsive. As a backend team leader, I’ve also architected APIs, optimized databases, and mentored developers, bridging the gap between user experience and technical infrastructure. Based in Toronto, ON."}
             </p>
           </div>
 
@@ -97,7 +97,7 @@ const Portfolio = () => {
               href="#projects"
               className="px-8 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-colors font-medium"
             >
-              View My Work
+              {"View My Work"}
             </a>
             <a
               href="#contact"
@@ -106,7 +106,7 @@ const Portfolio = () => {
                 : 'border-gray-300 hover:bg-gray-50'
                 }`}
             >
-              Get In Touch
+              {"Get In Touch"}
             </a>
           </div>
         </div>
@@ -120,20 +120,20 @@ const Portfolio = () => {
 
           <div className="max-w-4xl mx-auto">
             <p className="text-lg mb-6 text-gray-600 dark:text-gray-300">
-              I’m a passionate developer who thrives on solving complex challenges from both the front and back end. On the frontend, I specialize in building user-friendly, responsive interfaces that balance design and functionality. I pay attention to the details that make apps intuitive, from fluid navigation to accessible components.
+              {"I’m a passionate developer who thrives on solving complex challenges from both the front and back end. On the frontend, I specialize in building user-friendly, responsive interfaces that balance design and functionality. I pay attention to the details that make apps intuitive, from fluid navigation to accessible components."}
             </p>
 
 
             <p className="text-lg mb-6 text-gray-600 dark:text-gray-300">
-              On the backend, I’ve led teams at YourBeat Inc., architected APIs, and delivered infrastructure improvements that directly impacted scalability and performance.
+              {"On the backend, I’ve led teams at YourBeat Inc., architected APIs, and delivered infrastructure improvements that directly impacted scalability and performance."}
             </p>
 
             <p className="text-lg mb-6 text-gray-600 dark:text-gray-300">
-              My approach combines UI/UX empathy with technical precision. I don’t just write code , I design systems and experiences that are reliable, performant, and enjoyable to use.
+              {"My approach combines UI/UX empathy with technical precision. I don’t just write code , I design systems and experiences that are reliable, performant, and enjoyable to use."}
             </p>
 
             <p className="text-lg text-gray-600 dark:text-gray-300">
-              When I’m not building interfaces or optimizing systems, you’ll find me experimenting with new recipes, cycling through Toronto, or tending to my virtual farm in Stardew Valley.
+              {"When I’m not building interfaces or optimizing systems, you’ll find me experimenting with new recipes, cycling through Toronto, or tending to my virtual farm in Stardew Valley."}
             </p>
           </div>
         </div>
@@ -205,7 +205,7 @@ const Portfolio = () => {
             <div className={`p-6 rounded-xl ${darkMode ? 'bg-gray-800' : 'bg-gray-50'
               } hover:shadow-lg transition-shadow`}>
               <Cpu className="w-8 h-8 text-red-500 mb-4" />
-              <h3 className="text-xl font-semibold mb-4">Tools & Testing</h3>
+              <h3 className="text-xl font-semibold mb-4">{"Tools & Testing"}</h3>
               <div className="flex flex-wrap gap-2">
                 {skills.tools.map((skill) => (
                   <span
@@ -228,7 +228,7 @@ const Portfolio = () => {
       <section id="projects" className={`py-16 px-4 sm:px-6 lg:px-8 ${darkMode ? 'bg-gray-800' : 'bg-gray-50'
         }`}>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center">Featured Projects</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center">{"Featured Projects"}</h2>
 
           <div className="space-y-8">
             {projects.map((project, index) => (
@@ -248,10 +248,10 @@ const Portfolio = () => {
                             <Globe className="w-8 h-8 text-white" />
                           </div>
                           <p className="text-gray-500 dark:text-gray-400">
-                            Project Screenshot
+                            {"Project Screenshot"}
                           </p>
                           <p className="text-sm text-gray-400 dark:text-gray-500 mt-2">
-                            Coming Soon
+                            {"Coming Soon"}
                           </p>
                         </div>
                       </div>
@@ -296,7 +296,7 @@ const Portfolio = () => {
                       </div>
 
                       <div>
-                        <h4 className="font-semibold mb-3">Technologies Used:</h4>
+                        <h4 className="font-semibold mb-3">{"Technologies Used:"}</h4>
                         <div className="flex flex-wrap gap-2">
                           {project.technologies.map((tech) => (
                             <span
@@ -335,7 +335,7 @@ const Portfolio = () => {
 
           <div className="mt-12 text-center">
             <p className="text-gray-600 dark:text-gray-300">
-              More projects coming soon! I'm always working on something new.
+              {"More projects coming soon! I'm always working on something new."}
             </p>
           </div>
         </div>
@@ -344,11 +344,11 @@ const Portfolio = () => {
       {/* Contact Section */}
       <section id="contact" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-8">Let's Build Something Together</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-8">{"Let's Build Something Together"}</h2>
           <p className="text-lg mb-12 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            I'm always interested in discussing new opportunities, interesting projects, or just talking
+            {`I'm always interested in discussing new opportunities, interesting projects, or just talking
             about technology. Whether you're looking for a full-stack developer or want to chat about
-            the latest in web development, I'd love to hear from you.
+            the latest in web development, I'd love to hear from you.`}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -380,7 +380,7 @@ const Portfolio = () => {
         }`}>
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-gray-500 dark:text-gray-400">
-            © 2025 Douglas Ross. Built with React and lots of ☕
+            {"© 2025 Douglas Ross. Built with React and lots of ☕"}
           </p>
         </div>
       </footer>
