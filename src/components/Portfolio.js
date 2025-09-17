@@ -18,20 +18,25 @@ const Portfolio = () => {
     languages: ['JavaScript', 'TypeScript', 'SQL', 'HTML', 'CSS'],
     frameworks: ['React', 'Next.js', 'Node.js', 'Express', 'jQuery', 'Bootstrap', 'EJS'],
     databases: ['PostgreSQL', 'Prisma ORM'],
-    tools: ['Git', 'Jest', 'Cypress', 'Storybook', 'RSpec']
+    tools: ['Git', 'Jest', 'Cypress', 'Storybook']
   };
 
   const projects = [
     {
       title: "Cooking with Doug",
       description: "A modern recipe management platform that revolutionizes how home cooks organize and discover recipes.",
-      longDescription: "Built with performance and user experience in mind, this application leverages OpenAI's API for automatic recipe extraction, implements a sophisticated tagging system for recipe discovery, and supports complex user interactions. The platform demonstrates my ability to integrate multiple technologies seamlessly while maintaining clean, scalable code architecture.",
+      longDescription: "Built with both frontend polish and backend power in mind, this application delivers a smooth, responsive user experience on any device. It uses React, Next.js, and Tailwind CSS to create clean, intuitive interfaces, while leveraging OpenAI’s API and a robust backend to power intelligent recipe extraction and search.",
       technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'PostgreSQL', 'Node.js', 'OpenAI API'],
       features: [
-        'AI-powered recipe extraction and parsing',
-        'Advanced search and filtering with complex tag system',
-        'Real-time user interactions and recipe management',
-        'Responsive design optimized for mobile and desktop'
+        "AI-powered recipe extraction and parsing with natural language input",
+
+        "Responsive UI designed for both mobile and desktop cooking workflows",
+
+        "Advanced search and filtering with a visually rich tagging system",
+
+        "Interactive recipe management tools with real-time updates",
+
+        "Accessible design patterns to ensure inclusivity and ease of use",
       ],
       github: "https://github.com/placeholder",
       live: "https://cooking-with-doug.placeholder.com",
@@ -80,11 +85,10 @@ const Portfolio = () => {
               Douglas Ross
             </h1>
             <p className="text-xl sm:text-2xl mb-6 text-gray-600 dark:text-gray-300">
-              Full-stack developer who solves complex problems and builds systems that scale
+              Full-stack developer who builds intuitive front-end experiences and scalable backend systems
             </p>
             <p className="text-lg mb-8 text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
-              Backend team leader and full-stack developer with a proven track record of building scalable applications,
-              mentoring teams, and optimizing performance. Based in Toronto, ON.
+              Frontend-focused full-stack developer with a strong eye for clean design and seamless user interactions. Experienced in React, Next.js, and modern CSS frameworks, I craft performant interfaces that feel natural and responsive. As a backend team leader, I’ve also architected APIs, optimized databases, and mentored developers — bridging the gap between user experience and technical infrastructure. Based in Toronto, ON.
             </p>
           </div>
 
@@ -114,48 +118,23 @@ const Portfolio = () => {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center">About Me</h2>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-lg mb-6 text-gray-600 dark:text-gray-300">
-                I'm a passionate full-stack developer who thrives on solving complex technical challenges and building
-                systems that scale. With experience leading backend teams at YourBeat Inc., I've architected APIs,
-                mentored developers, and delivered infrastructure improvements that directly impact performance.
-              </p>
+          <div className="max-w-4xl mx-auto">
+            <p className="text-lg mb-6 text-gray-600 dark:text-gray-300">
+              I’m a passionate developer who thrives on solving complex challenges from both the front and back end. On the frontend, I specialize in building user-friendly, responsive interfaces that balance design and functionality. I pay attention to the details that make apps intuitive — from fluid navigation to accessible components.
+            </p>
 
-              <p className="text-lg mb-6 text-gray-600 dark:text-gray-300">
-                My approach combines technical precision with strategic thinking. I don't just write code – I build
-                robust architectures that handle growth, optimize for performance, and create maintainable systems
-                that teams can build upon. Every solution is designed with scalability and reliability in mind.
-              </p>
 
-              <p className="text-lg text-gray-600 dark:text-gray-300">
-                When I'm not architecting backend systems or optimizing database queries, you'll find me experimenting with
-                new recipes, cycling through Toronto, dancing, or tending to my virtual farm in Stardew Valley.
-              </p>
-            </div>
+            <p className="text-lg mb-6 text-gray-600 dark:text-gray-300">
+              On the backend, I’ve led teams at YourBeat Inc., architected APIs, and delivered infrastructure improvements that directly impacted scalability and performance.
+            </p>
 
-            <div className={`p-8 rounded-xl ${darkMode ? 'bg-gray-900' : 'bg-white'
-              } shadow-lg`}>
-              <h3 className="text-xl font-semibold mb-4">Quick Facts</h3>
-              <ul className="space-y-3 text-gray-600 dark:text-gray-300">
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                  Led backend team of 10+ developers
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                  Improved API response times by 60%
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                  Built 60% of YourBeat's backend infrastructure
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                  Passionate about documentation & knowledge sharing
-                </li>
-              </ul>
-            </div>
+            <p className="text-lg mb-6 text-gray-600 dark:text-gray-300">
+              My approach combines UI/UX empathy with technical precision. I don’t just write code — I design systems and experiences that are reliable, performant, and enjoyable to use.
+            </p>
+
+            <p className="text-lg text-gray-600 dark:text-gray-300">
+              When I’m not building interfaces or optimizing systems, you’ll find me experimenting with new recipes, cycling through Toronto, or tending to my virtual farm in Stardew Valley.
+            </p>
           </div>
         </div>
       </section>
@@ -260,6 +239,39 @@ const Portfolio = () => {
               >
                 <div className="p-8">
                   <div className="grid lg:grid-cols-2 gap-8 items-start">
+
+                    <div className="lg:sticky lg:top-8">
+                      <div className={`rounded-lg overflow-hidden ${darkMode ? 'bg-gray-800' : 'bg-gray-100'
+                        } aspect-video flex items-center justify-center shadow-inner`}>
+                        <div className="text-center p-8">
+                          <div className="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <Globe className="w-8 h-8 text-white" />
+                          </div>
+                          <p className="text-gray-500 dark:text-gray-400">
+                            Project Screenshot
+                          </p>
+                          <p className="text-sm text-gray-400 dark:text-gray-500 mt-2">
+                            Coming Soon
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Optional: Video placeholder */}
+                      <div className={`mt-4 rounded-lg overflow-hidden ${darkMode ? 'bg-gray-800' : 'bg-gray-100'
+                        } aspect-video flex items-center justify-center shadow-inner`}>
+                        <div className="text-center p-6">
+                          <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <span className="text-white text-lg">▶</span>
+                          </div>
+                          <p className="text-gray-500 dark:text-gray-400 text-sm">
+                            Demo Video
+                          </p>
+                          <p className="text-xs text-gray-400 dark:text-gray-500 mt-1">
+                            Coming Soon
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                     <div className="space-y-6">
                       <div>
                         <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
@@ -315,38 +327,6 @@ const Portfolio = () => {
                       </div>
                     </div>
 
-                    <div className="lg:sticky lg:top-8">
-                      <div className={`rounded-lg overflow-hidden ${darkMode ? 'bg-gray-800' : 'bg-gray-100'
-                        } aspect-video flex items-center justify-center shadow-inner`}>
-                        <div className="text-center p-8">
-                          <div className="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <Globe className="w-8 h-8 text-white" />
-                          </div>
-                          <p className="text-gray-500 dark:text-gray-400">
-                            Project Screenshot
-                          </p>
-                          <p className="text-sm text-gray-400 dark:text-gray-500 mt-2">
-                            Coming Soon
-                          </p>
-                        </div>
-                      </div>
-
-                      {/* Optional: Video placeholder */}
-                      <div className={`mt-4 rounded-lg overflow-hidden ${darkMode ? 'bg-gray-800' : 'bg-gray-100'
-                        } aspect-video flex items-center justify-center shadow-inner`}>
-                        <div className="text-center p-6">
-                          <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                            <span className="text-white text-lg">▶</span>
-                          </div>
-                          <p className="text-gray-500 dark:text-gray-400 text-sm">
-                            Demo Video
-                          </p>
-                          <p className="text-xs text-gray-400 dark:text-gray-500 mt-1">
-                            Coming Soon
-                          </p>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
