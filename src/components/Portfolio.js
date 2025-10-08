@@ -240,7 +240,7 @@ const Portfolio = () => {
                       <div className={`rounded-lg overflow-hidden ${darkMode ? 'bg-gray-800' : 'bg-gray-100'
                         } aspect-video flex items-center justify-center shadow-inner`}>
                         <img
-                          src="./photo.png"
+                          src="public/photo.png"
                           alt="Project Screenshot"
                           className="object-cover w-full h-full"
                         />
@@ -250,7 +250,7 @@ const Portfolio = () => {
                       <div className={`mt-4 rounded-lg overflow-hidden ${darkMode ? 'bg-gray-800' : 'bg-gray-100'
                         } aspect-video flex items-center justify-center shadow-inner`}>
                         <img
-                          src="./video.png"
+                          src="public/video.png"
                           alt="Demo Video Placeholder"
                           className="object-cover w-full h-full"
                         />
