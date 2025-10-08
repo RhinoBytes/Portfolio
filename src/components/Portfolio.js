@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { Moon, Sun, Github, Linkedin, Mail, ExternalLink, Code, Database, Globe, Cpu } from 'lucide-react';
 
 const Portfolio = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   useEffect(() => {
     if (darkMode) {
@@ -38,8 +38,8 @@ const Portfolio = () => {
 
         "Accessible design patterns to ensure inclusivity and ease of use",
       ],
-      github: "https://github.com/placeholder",
-      live: "https://cooking-with-doug.placeholder.com",
+      github: "https://github.com/RhinoBytes/RecipesWebsite",
+      live: "https://rhinobytes.github.io/RecipesWebsite/",
       image: "/api/placeholder/600/400"
     }
   ];
@@ -84,10 +84,10 @@ const Portfolio = () => {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-500 to-blue-600 bg-clip-text text-transparent pb-2 text-center">
               {"Douglas Ross"}
             </h1>
-            <p className="text-xl sm:text-2xl mb-6 text-gray-600 dark:text-gray-300 text-center">
+            <p className="text-xl sm:text-2xl mb-6 text-gray-600 dark:text-white text-center">
               {"Full-Stack developer who builds intuitive front-end experiences and scalable backend systems"}
             </p>
-            <p className="text-lg mb-8 text-gray-500 dark:text-gray-400 max-w-2xl mx-auto text-center">
+            <p className="text-lg mb-8 text-gray-500 dark:text-white max-w-2xl mx-auto text-center">
               {"Frontend-focused full-stack developer with a strong eye for clean design and seamless user interactions. Experienced in React, Next.js, and modern CSS frameworks, I craft performant interfaces that feel natural and responsive. As a backend team leader, I’ve also architected APIs, optimized databases, and mentored developers, bridging the gap between user experience and technical infrastructure. Based in Toronto, ON."}
             </p>
           </div>
@@ -118,19 +118,19 @@ const Portfolio = () => {
           <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center">About Me</h2>
 
           <div className="max-w-4xl mx-auto">
-            <p className="text-lg mb-6 text-gray-600 dark:text-gray-300 text-center">
-              {"I’m a passionate developer who thrives on solving complex challenges from both the front and back end. On the frontend, I specialize in building user-friendly, responsive interfaces that balance design and functionality. I pay attention to the details that make apps intuitive, from fluid navigation to accessible components."}
+            <p className="text-lg mb-6 text-gray-600 dark:text-white text-center">
+              {"I'm a passionate developer who thrives on solving complex challenges from both the front and back end. On the frontend, I specialize in building user-friendly, responsive interfaces that balance design and functionality. I pay attention to the details that make apps intuitive, from fluid navigation to accessible components."}
             </p>
 
-            <p className="text-lg mb-6 text-gray-600 dark:text-gray-300 text-center">
-              {"On the backend, I’ve led teams at YourBeat Inc., architected APIs, and delivered infrastructure improvements that directly impacted scalability and performance."}
+            <p className="text-lg mb-6 text-gray-600 dark:text-white text-center">
+              {"On the backend, I've led teams at YourBeat Inc., architected APIs, and delivered infrastructure improvements that directly impacted scalability and performance."}
             </p>
 
-            <p className="text-lg mb-6 text-gray-600 dark:text-gray-300 text-center">
-              {"My approach combines UI/UX empathy with technical precision. I don’t just write code , I design systems and experiences that are reliable, performant, and enjoyable to use."}
+            <p className="text-lg mb-6 text-gray-600 dark:text-white text-center">
+              {"My approach combines UI/UX empathy with technical precision. I don't just write code , I design systems and experiences that are reliable, performant, and enjoyable to use."}
             </p>
 
-            <p className="text-lg text-gray-600 dark:text-gray-300 text-center">
+            <p className="text-lg text-gray-600 dark:text-white text-center">
               {"When I’m not building interfaces or optimizing systems, you’ll find me experimenting with new recipes, cycling through Toronto, or tending to my virtual farm in Stardew Valley."}
             </p>
           </div>
@@ -150,7 +150,7 @@ const Portfolio = () => {
                   <span
                     key={skill}
                     className={`px-3 py-1 rounded-full text-sm ${darkMode
-                      ? 'bg-gray-700 text-gray-300'
+                      ? 'bg-gray-700 text-white'
                       : 'bg-gray-200 text-gray-700'
                       }`}
                   >
@@ -169,7 +169,7 @@ const Portfolio = () => {
                   <span
                     key={skill}
                     className={`px-3 py-1 rounded-full text-sm ${darkMode
-                      ? 'bg-gray-700 text-gray-300'
+                      ? 'bg-gray-700 text-white'
                       : 'bg-gray-200 text-gray-700'
                       }`}
                   >
@@ -188,7 +188,7 @@ const Portfolio = () => {
                   <span
                     key={skill}
                     className={`px-3 py-1 rounded-full text-sm ${darkMode
-                      ? 'bg-gray-700 text-gray-300'
+                      ? 'bg-gray-700 text-white'
                       : 'bg-gray-200 text-gray-700'
                       }`}
                   >
@@ -207,7 +207,7 @@ const Portfolio = () => {
                   <span
                     key={skill}
                     className={`px-3 py-1 rounded-full text-sm ${darkMode
-                      ? 'bg-gray-700 text-gray-300'
+                      ? 'bg-gray-700 text-white'
                       : 'bg-gray-200 text-gray-700'
                       }`}
                   >
@@ -220,9 +220,8 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Projects Section */}
-      <section id="projects" className={`py-16 px-4 sm:px-6 lg:px-8 ${darkMode ? 'bg-gray-800' : 'bg-gray-50'
-        }`}>
+
+      <section id="projects" className={`py-16 px-4 sm:px-6 lg:px-8 ${darkMode ? 'bg-gray-800' : 'bg-gray-50'}`}>
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center">{"Featured Projects"}</h2>
 
@@ -237,44 +236,33 @@ const Portfolio = () => {
                   <div className="grid lg:grid-cols-2 gap-8 items-start">
 
                     <div className="lg:sticky lg:top-8">
+                      {/* Project Photo */}
                       <div className={`rounded-lg overflow-hidden ${darkMode ? 'bg-gray-800' : 'bg-gray-100'
                         } aspect-video flex items-center justify-center shadow-inner`}>
-                        <div className="text-center p-8">
-                          <div className="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <Globe className="w-8 h-8 text-white" />
-                          </div>
-                          <p className="text-gray-500 dark:text-gray-400">
-                            {"Project Screenshot"}
-                          </p>
-                          <p className="text-sm text-gray-400 dark:text-gray-500 mt-2">
-                            {"Coming Soon"}
-                          </p>
-                        </div>
+                        <img
+                          src="/photo.png"
+                          alt="Project Screenshot"
+                          className="object-cover w-full h-full"
+                        />
                       </div>
 
-                      {/* Optional: Video placeholder */}
+                      {/* Temporary Video Photo */}
                       <div className={`mt-4 rounded-lg overflow-hidden ${darkMode ? 'bg-gray-800' : 'bg-gray-100'
                         } aspect-video flex items-center justify-center shadow-inner`}>
-                        <div className="text-center p-6">
-                          <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                            <span className="text-white text-lg">▶</span>
-                          </div>
-                          <p className="text-gray-500 dark:text-gray-400 text-sm">
-                            Demo Video
-                          </p>
-                          <p className="text-xs text-gray-400 dark:text-gray-500 mt-1">
-                            Coming Soon
-                          </p>
-                        </div>
+                        <img
+                          src="/video.png"
+                          alt="Demo Video Placeholder"
+                          className="object-cover w-full h-full"
+                        />
                       </div>
                     </div>
                     <div className="space-y-6">
                       <div>
                         <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
-                        <p className="text-lg mb-4 text-gray-600 dark:text-gray-300">
+                        <p className="text-lg mb-4 text-gray-600 dark:text-white">
                           {project.description}
                         </p>
-                        <p className="text-gray-600 dark:text-gray-300">
+                        <p className="text-gray-600 dark:text-white">
                           {project.longDescription}
                         </p>
                       </div>
@@ -285,7 +273,7 @@ const Portfolio = () => {
                           {project.features.map((feature, i) => (
                             <li key={i} className="flex items-start">
                               <span className="w-2 h-2 bg-indigo-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
-                              <span className="text-gray-600 dark:text-gray-300">{feature}</span>
+                              <span className="text-gray-600 dark:text-white">{feature}</span>
                             </li>
                           ))}
                         </ul>
@@ -330,18 +318,16 @@ const Portfolio = () => {
           </div>
 
           <div className="mt-12 text-center">
-            <p className="text-gray-600 dark:text-gray-300">
+            <p className="text-gray-600 dark:text-white">
               {"More projects coming soon! I'm always working on something new."}
             </p>
           </div>
         </div>
       </section>
-
-      {/* Contact Section */}
       <section id="contact" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-8">{"Let's Build Something Together"}</h2>
-          <p className="text-lg mb-12 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <p className="text-lg mb-12 text-gray-600 dark:text-white max-w-2xl mx-auto">
             {`I'm always interested in discussing new opportunities, interesting projects, or just talking
             about technology. Whether you're looking for a full-stack developer or want to chat about
             the latest in web development, I'd love to hear from you.`}
@@ -375,7 +361,7 @@ const Portfolio = () => {
       <footer className={`py-8 px-4 sm:px-6 lg:px-8 border-t ${darkMode ? 'border-gray-800 bg-gray-900' : 'border-gray-200 bg-white'
         }`}>
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-gray-500 dark:text-gray-400">
+          <p className="text-gray-500 dark:text-white">
             {"© 2025 Douglas Ross. Built with React and lots of ☕"}
           </p>
         </div>
