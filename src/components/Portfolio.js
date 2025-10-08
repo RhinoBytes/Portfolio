@@ -78,16 +78,16 @@ const Portfolio = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-4xl mx-auto">
           <div className="mb-8">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-500 to-blue-600 bg-clip-text text-transparent">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-500 to-blue-600 bg-clip-text text-transparent pb-2 text-center">
               {"Douglas Ross"}
             </h1>
-            <p className="text-xl sm:text-2xl mb-6 text-gray-600 dark:text-gray-300">
-              {"Full - stack developer who builds intuitive front-end experiences and scalable backend systems"}
+            <p className="text-xl sm:text-2xl mb-6 text-gray-600 dark:text-gray-300 text-center">
+              {"Full-Stack developer who builds intuitive front-end experiences and scalable backend systems"}
             </p>
-            <p className="text-lg mb-8 text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
+            <p className="text-lg mb-8 text-gray-500 dark:text-gray-400 max-w-2xl mx-auto text-center">
               {"Frontend-focused full-stack developer with a strong eye for clean design and seamless user interactions. Experienced in React, Next.js, and modern CSS frameworks, I craft performant interfaces that feel natural and responsive. As a backend team leader, I’ve also architected APIs, optimized databases, and mentored developers, bridging the gap between user experience and technical infrastructure. Based in Toronto, ON."}
             </p>
           </div>
@@ -95,13 +95,13 @@ const Portfolio = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="#projects"
-              className="px-8 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-colors font-medium"
+              className="px-8 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-colors font-medium text-center"
             >
               {"View My Work"}
             </a>
             <a
               href="#contact"
-              className={`px-8 py-3 border-2 rounded-lg transition-colors font-medium ${darkMode
+              className={`px-8 py-3 border-2 rounded-lg transition-colors font-medium text-center ${darkMode
                 ? 'border-gray-700 hover:bg-gray-800'
                 : 'border-gray-300 hover:bg-gray-50'
                 }`}
@@ -113,33 +113,29 @@ const Portfolio = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className={`py-16 px-4 sm:px-6 lg:px-8 ${darkMode ? 'bg-gray-800' : 'bg-gray-50'
-        }`}>
+      <section id="about" className={`py-16 px-4 sm:px-6 lg:px-8 ${darkMode ? 'bg-gray-800' : 'bg-gray-50'} text-center`}>
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center">About Me</h2>
 
           <div className="max-w-4xl mx-auto">
-            <p className="text-lg mb-6 text-gray-600 dark:text-gray-300">
+            <p className="text-lg mb-6 text-gray-600 dark:text-gray-300 text-center">
               {"I’m a passionate developer who thrives on solving complex challenges from both the front and back end. On the frontend, I specialize in building user-friendly, responsive interfaces that balance design and functionality. I pay attention to the details that make apps intuitive, from fluid navigation to accessible components."}
             </p>
 
-
-            <p className="text-lg mb-6 text-gray-600 dark:text-gray-300">
+            <p className="text-lg mb-6 text-gray-600 dark:text-gray-300 text-center">
               {"On the backend, I’ve led teams at YourBeat Inc., architected APIs, and delivered infrastructure improvements that directly impacted scalability and performance."}
             </p>
 
-            <p className="text-lg mb-6 text-gray-600 dark:text-gray-300">
+            <p className="text-lg mb-6 text-gray-600 dark:text-gray-300 text-center">
               {"My approach combines UI/UX empathy with technical precision. I don’t just write code , I design systems and experiences that are reliable, performant, and enjoyable to use."}
             </p>
 
-            <p className="text-lg text-gray-600 dark:text-gray-300">
+            <p className="text-lg text-gray-600 dark:text-gray-300 text-center">
               {"When I’m not building interfaces or optimizing systems, you’ll find me experimenting with new recipes, cycling through Toronto, or tending to my virtual farm in Stardew Valley."}
             </p>
           </div>
         </div>
       </section>
-
-      {/* Skills Section */}
       <section id="skills" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center">Technical Skills</h2>
