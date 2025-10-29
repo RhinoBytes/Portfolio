@@ -23,6 +23,14 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Fix text clipping for gradient text */
+.bg-clip-text {
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  padding-bottom: 0.1em;
+  line-height: 1.2;
+}
+
 /* Custom animations */
 @keyframes fade-in-up {
   from {
@@ -46,29 +54,27 @@ html {
 
 .animate-fade-in-up {
   animation: fade-in-up 0.6s ease-out forwards;
+  will-change: opacity, transform;
 }
 
 .animate-fade-in {
   animation: fade-in 0.8s ease-out forwards;
+  will-change: opacity;
 }
 
-/* Stagger animation delays */
+/* Stagger animation delays - removed initial opacity to prevent layout shift */
 .animate-delay-100 {
   animation-delay: 0.1s;
-  opacity: 0;
 }
 
 .animate-delay-200 {
   animation-delay: 0.2s;
-  opacity: 0;
 }
 
 .animate-delay-300 {
   animation-delay: 0.3s;
-  opacity: 0;
 }
 
 .animate-delay-400 {
   animation-delay: 0.4s;
-  opacity: 0;
 }
