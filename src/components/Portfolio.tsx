@@ -39,7 +39,7 @@ const Portfolio = () => {
       <nav className="fixed top-0 w-full z-50 backdrop-blur-md transition-colors duration-300 bg-white/80 dark:bg-gray-900/80 border-b border-gray-200 dark:border-gray-800">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="font-bold text-xl bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent">
+            <div className="font-bold text-xl bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent leading-tight pb-1">
               Douglas Ross
             </div>
             <div className="flex items-center space-x-6">
