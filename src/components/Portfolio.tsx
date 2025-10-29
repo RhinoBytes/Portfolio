@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Image from 'next/image';
 import { Github, Linkedin, Mail, ExternalLink, Code, Database, Globe, Cpu } from 'lucide-react';
 import { ThemeToggle } from './ThemeToggle';
 
@@ -38,7 +39,7 @@ const Portfolio = () => {
       <nav className="fixed top-0 w-full z-50 backdrop-blur-md transition-colors duration-300 bg-white/80 dark:bg-gray-900/80 border-b border-gray-200 dark:border-gray-800">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="font-bold text-xl bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent">
+            <div className="font-bold text-xl bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent leading-tight pb-1">
               Douglas Ross
             </div>
             <div className="flex items-center space-x-6">
@@ -56,10 +57,10 @@ const Portfolio = () => {
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="text-center space-y-6">
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-indigo-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent animate-fade-in-up">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-indigo-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent animate-fade-in-up leading-tight pb-2">
               Douglas Ross
             </h1>
-            <p className="text-2xl sm:text-3xl mb-6 text-gray-700 dark:text-gray-200 font-medium animate-fade-in-up animate-delay-100">
+            <p className="text-2xl sm:text-3xl mb-6 text-gray-700 dark:text-gray-200 font-medium animate-fade-in-up animate-delay-100 leading-relaxed">
               Full-Stack developer who builds intuitive front-end experiences and scalable backend systems
             </p>
             <p className="text-lg mb-8 text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed animate-fade-in-up animate-delay-200">
@@ -87,7 +88,7 @@ const Portfolio = () => {
       {/* About Section */}
       <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800/50">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-16 text-center bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-16 text-center bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent leading-tight pb-2">
             About Me
           </h2>
 
@@ -114,7 +115,7 @@ const Portfolio = () => {
       {/* Skills Section */}
       <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-16 text-center bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-16 text-center bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent leading-tight pb-2">
             Technical Skills
           </h2>
 
@@ -185,7 +186,7 @@ const Portfolio = () => {
       {/* Projects Section */}
       <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800/50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-16 text-center bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-16 text-center bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent leading-tight pb-2">
             Featured Projects
           </h2>
 
@@ -199,20 +200,25 @@ const Portfolio = () => {
                   <div className="grid lg:grid-cols-2 gap-12 items-start">
                     <div className="space-y-4">
                       {/* Project Photo */}
-                      <div className="rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-800 aspect-video shadow-lg">
-                        <img
+                      <div className="rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-800 aspect-video shadow-lg relative">
+                        <Image
                           src={project.image}
-                          alt="Project Screenshot"
-                          className="object-cover w-full h-full"
+                          alt={`${project.title} - Project Screenshot`}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          priority
                         />
                       </div>
 
                       {/* Video Thumbnail */}
-                      <div className="rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-800 aspect-video shadow-lg">
-                        <img
+                      <div className="rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-800 aspect-video shadow-lg relative">
+                        <Image
                           src={project.video}
-                          alt="Demo Video Placeholder"
-                          className="object-cover w-full h-full"
+                          alt={`${project.title} - Demo Video Placeholder`}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         />
                       </div>
                     </div>
@@ -292,7 +298,7 @@ const Portfolio = () => {
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-8 bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-8 bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent leading-tight pb-2">
             Let&apos;s Build Something Together
           </h2>
           <p className="text-lg mb-12 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
