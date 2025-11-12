@@ -152,7 +152,7 @@ const Portfolio = () => {
       <section 
         id="about" 
         className="py-20 px-4 sm:px-6 lg:px-8"
-        style={{ backgroundColor: 'var(--color-surface)' }}
+        style={{ backgroundColor: 'var(--color-alternate-background)' }}
         aria-labelledby="about-heading"
       >
         <div className="max-w-4xl mx-auto">
@@ -339,7 +339,7 @@ const Portfolio = () => {
       <section 
         id="projects" 
         className="py-20 px-4 sm:px-6 lg:px-8"
-        style={{ backgroundColor: 'var(--color-surface)' }}
+        style={{ backgroundColor: 'var(--color-alternate-background)' }}
         aria-labelledby="projects-heading"
       >
         <div className="max-w-6xl mx-auto">

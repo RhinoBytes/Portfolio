@@ -13,6 +13,7 @@ export interface ThemeColors {
   background: string;
   surface: string;
   surfaceHover: string;
+  alternateBackground: string; // Distinct background for alternating sections
   border: string;
   borderSubtle: string;
   
@@ -59,9 +60,10 @@ const oceanTheme: Theme = {
   displayName: 'Ocean',
   mode: 'light',
   colors: {
-    background: '#F8FAFB',
-    surface: '#FFFFFF',
+    background: '#FFFFFF',
+    surface: '#F8FAFB',
     surfaceHover: '#F1F5F9',
+    alternateBackground: '#F0F7FF', // Stronger blue tint for clear section distinction
     border: '#E2E8F0',
     borderSubtle: '#F1F5F9',
     
@@ -97,9 +99,10 @@ const sageTheme: Theme = {
   displayName: 'Sage',
   mode: 'light',
   colors: {
-    background: '#F5F7F4',
-    surface: '#FFFFFF',
+    background: '#FFFFFF',
+    surface: '#F5F7F4',
     surfaceHover: '#EEF0EC',
+    alternateBackground: '#F1F6EE', // Stronger sage tint for clear section distinction
     border: '#E1E4DD',
     borderSubtle: '#EEF0EC',
     
@@ -138,6 +141,7 @@ const midnightTheme: Theme = {
     background: '#0A0E1A',
     surface: '#131825',
     surfaceHover: '#1A2235',
+    alternateBackground: '#121623', // Clearly distinct shade for section separation
     border: '#2D3548',
     borderSubtle: '#1A2235',
     
@@ -176,6 +180,7 @@ const slateTheme: Theme = {
     background: '#0F172A',
     surface: '#1E293B',
     surfaceHover: '#334155',
+    alternateBackground: '#192031', // Clearly distinct intermediate shade
     border: '#475569',
     borderSubtle: '#334155',
     
