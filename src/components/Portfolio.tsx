@@ -374,9 +374,31 @@ const Portfolio = () => {
                 />
 
                 <div className="p-6 lg:p-10">
-                  <div className="grid lg:grid-cols-[1.2fr,1fr] gap-10 items-start">
-                    {/* Left Column - Project Details */}
-                    <div className="space-y-6 order-2 lg:order-1">
+                  <div className="grid lg:grid-cols-[1fr,1.2fr] gap-10 items-start">
+                    {/* Left Column - Project GIF */}
+                    <div className="order-1 lg:order-1">
+                      <div 
+                        className="rounded-xl overflow-hidden aspect-video shadow-2xl relative border-2 group-hover:scale-[1.02] transition-transform duration-300"
+                        style={{ 
+                          backgroundColor: 'var(--color-surface)',
+                          borderColor: 'var(--color-border)',
+                          boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)'
+                        }}
+                      >
+                        <Image
+                          src={project.video}
+                          alt={`${project.title} - Project Demo`}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
+                          priority
+                          unoptimized
+                        />
+                      </div>
+                    </div>
+
+                    {/* Right Column - Project Details */}
+                    <div className="space-y-6 order-2 lg:order-2">
                       <div>
                         <h3 
                           className="text-3xl lg:text-4xl font-bold mb-3 bg-clip-text text-transparent leading-tight pb-1"
@@ -469,27 +491,6 @@ const Portfolio = () => {
                           <ExternalLink className="w-5 h-5 mr-2 group-hover/btn:rotate-12 transition-transform duration-200" />
                           Live Demo
                         </a>
-                      </div>
-                    </div>
-
-                    {/* Right Column - Project Image */}
-                    <div className="order-1 lg:order-2">
-                      <div 
-                        className="rounded-xl overflow-hidden aspect-video shadow-2xl relative border-2 group-hover:scale-[1.02] transition-transform duration-300"
-                        style={{ 
-                          backgroundColor: 'var(--color-surface)',
-                          borderColor: 'var(--color-border)',
-                          boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)'
-                        }}
-                      >
-                        <Image
-                          src={project.image}
-                          alt={`${project.title} - Project Screenshot`}
-                          fill
-                          className="object-cover"
-                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
-                          priority
-                        />
                       </div>
                     </div>
                   </div>
