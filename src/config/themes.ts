@@ -211,8 +211,8 @@ export const themes: Record<ThemeName, Theme> = {
 export const lightThemes: ThemeName[] = ['ocean', 'sage'];
 export const darkThemes: ThemeName[] = ['midnight', 'slate'];
 
-export const defaultTheme: ThemeName = 'ocean';
-export const defaultDarkTheme: ThemeName = 'midnight';
+export const defaultTheme: ThemeName = 'sage';
+export const defaultDarkTheme: ThemeName = 'slate';
 
 /**
  * Get theme by name with fallback

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { Github, Linkedin, Mail, ExternalLink, Code, Database, Globe, Cpu } from 'lucide-react';
+import { Linkedin, Mail, ExternalLink, Code, Database, Globe, Cpu } from 'lucide-react';
 import { EnhancedThemeToggle } from './EnhancedThemeToggle';
 
 const Portfolio = () => {
@@ -15,21 +15,20 @@ const Portfolio = () => {
 
   const projects = [
     {
-      title: "Cooking with Doug",
-      description: "A modern recipe management platform that revolutionizes how home cooks organize and discover recipes.",
-      longDescription: "Built with both frontend polish and backend power in mind, this application delivers a smooth, responsive user experience on any device. It uses React, Next.js, and Tailwind CSS to create clean, intuitive interfaces, while leveraging OpenAI's API and a robust backend to power intelligent recipe extraction and search.",
-      technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'PostgreSQL', 'Node.js', 'OpenAI API'],
+      title: "Cookbook",
+      description: "A production-ready recipe management platform that streamlines how home cooks organize and discover recipes.",
+      longDescription: "Built with both frontend polish and backend power in mind, this application delivers a smooth, responsive user experience on any device. It uses React, Next.js, and Tailwind CSS for clean, intuitive interfaces, while leveraging OpenAI's API plus a robust backend with a normalized PostgreSQL schema, secure authentication, and scalable server-side logic to power intelligent recipe extraction and search.",
+      technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma', 'PostgreSQL', 'OpenAI API'],
       features: [
-        "AI-powered recipe extraction and parsing with natural language input",
-        "Responsive UI designed for both mobile and desktop cooking workflows",
+        "AI-powered recipe extraction and parsing from natural language input",
+        "Responsive UI optimized for both mobile and desktop cooking workflows",
         "Advanced search and filtering with a visually rich tagging system",
         "Interactive recipe management tools with real-time updates",
-        "Accessible design patterns to ensure inclusivity and ease of use",
+        "Secure authentication and a scalable, well-indexed database schema",
       ],
-      github: "https://github.com/RhinoBytes/RecipesWebsite",
-      live: "https://rhinobytes.github.io/RecipesWebsite/",
-      image: "/photo.png",
-      video: "/video.png"
+      live: "https://recipe-website-six-tawny.vercel.app/",
+      image: "/demo.png",
+      video: "/cookbook.gif"
     }
   ];
 
@@ -467,19 +466,6 @@ const Portfolio = () => {
                       </div>
 
                       <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                        <a
-                          href={project.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center justify-center px-6 py-3 text-white rounded-xl transition-all duration-200 font-medium shadow-lg hover:shadow-xl hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
-                          style={{ 
-                            backgroundColor: 'var(--color-text)',
-                            color: 'var(--color-background)'
-                          }}
-                        >
-                          <Github className="w-5 h-5 mr-2" />
-                          View Code
-                        </a>
                         <a
                           href={project.live}
                           target="_blank"
