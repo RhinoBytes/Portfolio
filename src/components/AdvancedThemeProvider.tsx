@@ -19,27 +19,24 @@ export function AdvancedThemeProvider({ children }: { children: React.ReactNode 
 
   useEffect(() => {
     setMounted(true);
-    // Load saved theme from localStorage
     const savedTheme = localStorage.getItem('advanced-theme') as ThemeName;
     if (savedTheme && themes[savedTheme]) {
       setCurrentTheme(savedTheme);
     } else {
-      // Set default based on mode
       setCurrentTheme(mode === 'dark' ? defaultDarkTheme : defaultTheme);
     }
-  }, []);
+  }, [mode]);
 
   useEffect(() => {
     if (!mounted) return;
     
-    // Auto-switch theme when mode changes if current theme doesn't match mode
     const currentThemeObj = themes[currentTheme];
-    if (currentThemeObj) {
-      if (mode === 'dark' && currentThemeObj.mode === 'light') {
-        setCurrentTheme(defaultDarkTheme);
-      } else if (mode === 'light' && currentThemeObj.mode === 'dark') {
-        setCurrentTheme(defaultTheme);
-      }
+    if (!currentThemeObj) return;
+    
+    if (mode === 'dark' && currentThemeObj.mode === 'light') {
+      setCurrentTheme(defaultDarkTheme);
+    } else if (mode === 'light' && currentThemeObj.mode === 'dark') {
+      setCurrentTheme(defaultTheme);
     }
   }, [mode, currentTheme, mounted]);
 
@@ -49,7 +46,6 @@ export function AdvancedThemeProvider({ children }: { children: React.ReactNode 
     const theme = themes[currentTheme];
     if (!theme) return;
 
-    // Apply CSS custom properties
     const root = document.documentElement;
     const colors = theme.colors;
 
@@ -58,7 +54,6 @@ export function AdvancedThemeProvider({ children }: { children: React.ReactNode 
     root.style.setProperty('--color-surface-hover', colors.surfaceHover);
     root.style.setProperty('--color-alternate-background', colors.alternateBackground);
     root.style.setProperty('--color-border', colors.border);
-    root.style.setProperty('--color-border-subtle', colors.borderSubtle);
     
     root.style.setProperty('--color-text', colors.text);
     root.style.setProperty('--color-text-muted', colors.textMuted);
@@ -70,17 +65,10 @@ export function AdvancedThemeProvider({ children }: { children: React.ReactNode 
     
     root.style.setProperty('--color-secondary', colors.secondary);
     root.style.setProperty('--color-secondary-hover', colors.secondaryHover);
-    root.style.setProperty('--color-secondary-text', colors.secondaryText);
-    
-    root.style.setProperty('--color-success', colors.success);
-    root.style.setProperty('--color-warning', colors.warning);
-    root.style.setProperty('--color-error', colors.error);
     
     root.style.setProperty('--gradient', colors.gradient);
     root.style.setProperty('--shadow', colors.shadow);
-    root.style.setProperty('--glow', colors.glow);
 
-    // Save to localStorage
     localStorage.setItem('advanced-theme', currentTheme);
   }, [currentTheme, mounted]);
 
