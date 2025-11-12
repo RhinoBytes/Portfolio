@@ -56,6 +56,7 @@ export function AdvancedThemeProvider({ children }: { children: React.ReactNode 
     root.style.setProperty('--color-background', colors.background);
     root.style.setProperty('--color-surface', colors.surface);
     root.style.setProperty('--color-surface-hover', colors.surfaceHover);
+    root.style.setProperty('--color-alternate-background', colors.alternateBackground);
     root.style.setProperty('--color-border', colors.border);
     root.style.setProperty('--color-border-subtle', colors.borderSubtle);
     
