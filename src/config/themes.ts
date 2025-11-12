@@ -145,16 +145,5 @@ export const themes: Record<ThemeName, Theme> = {
   slate: slateTheme,
 };
 
-export const lightThemes: ThemeName[] = ['ocean', 'sage'];
-export const darkThemes: ThemeName[] = ['midnight', 'slate'];
-
 export const defaultTheme: ThemeName = 'sage';
 export const defaultDarkTheme: ThemeName = 'slate';
-
-export function getTheme(name: ThemeName): Theme {
-  return themes[name] || themes[defaultTheme];
-}
-
-export function getDefaultThemeForMode(mode: ThemeMode): ThemeName {
-  return mode === 'dark' ? defaultDarkTheme : defaultTheme;
-}
