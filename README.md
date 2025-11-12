@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Douglas Ross - Portfolio
 
-## Getting Started
+A modern, responsive portfolio website showcasing full-stack development expertise with a focus on frontend excellence and user experience.
 
-First, run the development server:
+## About This Project
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+This portfolio demonstrates proficiency in modern web development technologies and best practices, featuring:
+
+- **Responsive Design**: Fully responsive interface that works seamlessly across all devices
+- **Theme System**: Dynamic multi-theme support with four distinct color schemes (Ocean, Sage, Midnight, Slate)
+- **Accessibility**: WCAG 2.1 AA compliant color contrasts and semantic HTML
+- **Performance**: Optimized images, code splitting, and server-side rendering
+- **Modern UI/UX**: Smooth animations, intuitive navigation, and polished interactions
+
+## Technologies Used
+
+### Frontend
+- **React 19** - Latest React features with functional components and hooks
+- **Next.js 15** - App Router, server components, and optimized image handling
+- **TypeScript 5** - Type-safe development with strict type checking
+- **Tailwind CSS 4** - Utility-first CSS with custom theming and PostCSS
+
+### Development Tools
+- **Turbopack** - Next-generation bundler for faster builds
+- **ESLint** - Code quality and consistency
+- **next-themes** - Advanced theme management with persistence
+- **Lucide React** - Modern icon library
+
+### Key Features
+- Dynamic theme switching with localStorage persistence
+- Custom CSS variables for flexible theming
+- Gradient accents and smooth transitions
+- Optimized fonts with fallback support (Inter, JetBrains Mono)
+- SEO-optimized metadata and Open Graph tags
+- Semantic HTML with proper ARIA labels
+
+## Project Structure
+
+```
+src/
+├── app/                    # Next.js App Router
+│   ├── layout.tsx         # Root layout with metadata
+│   ├── page.tsx           # Home page
+│   └── globals.css        # Global styles and theme variables
+├── components/            # React components
+│   ├── Portfolio.tsx      # Main portfolio component
+│   ├── AdvancedThemeProvider.tsx
+│   ├── EnhancedThemeToggle.tsx
+│   └── ThemeProvider.tsx
+└── config/                # Configuration files
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Design Philosophy
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This portfolio embodies a professional, clean aesthetic with:
+- Modern typography and spacing
+- Strategic use of gradients for visual interest
+- Consistent hover and focus states
+- Subtle animations that enhance rather than distract
+- Clear visual hierarchy and content organization
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Technical Highlights
 
-## Learn More
+- **Server-Side Rendering**: Leveraging Next.js for optimal performance
+- **Type Safety**: Full TypeScript implementation for maintainable code
+- **Component Architecture**: Modular, reusable components
+- **Theme System**: CSS custom properties for dynamic theming
+- **Accessibility First**: Semantic HTML, keyboard navigation, screen reader support
+- **Performance Optimization**: Image optimization, code splitting, efficient rendering
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Built by Douglas Ross** - Full-Stack Developer specializing in React, Next.js, and modern web technologies.
