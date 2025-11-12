@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import { AdvancedThemeProvider } from "@/components/AdvancedThemeProvider";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -56,9 +55,7 @@ export default function RootLayout({
           storageKey="portfolio-theme"
           disableTransitionOnChange={false}
         >
-          <AdvancedThemeProvider>
-            {children}
-          </AdvancedThemeProvider>
+          {children}
         </ThemeProvider>
       </body>
     </html>
