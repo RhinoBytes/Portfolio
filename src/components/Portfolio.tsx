@@ -351,112 +351,102 @@ const Portfolio = () => {
             Featured Projects
           </h2>
 
-          <div className="space-y-8">
+          <div className="space-y-12">
             {projects.map((project, index) => (
               <article
                 key={index}
-                className="rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border"
+                className="rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border-2 group relative"
                 style={{ 
                   backgroundColor: 'var(--color-background)',
-                  borderColor: 'var(--color-border)'
+                  borderColor: 'var(--color-border)',
+                  boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)'
                 }}
               >
-                <div className="p-8 lg:p-12">
-                  <div className="grid lg:grid-cols-2 gap-12 items-start">
-                    <div className="space-y-4">
-                      {/* Project Photo */}
-                      <div 
-                        className="rounded-xl overflow-hidden aspect-video shadow-lg relative border"
-                        style={{ 
-                          backgroundColor: 'var(--color-surface)',
-                          borderColor: 'var(--color-border-subtle)'
-                        }}
-                      >
-                        <Image
-                          src={project.image}
-                          alt={`${project.title} - Project Screenshot`}
-                          fill
-                          className="object-cover"
-                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                          priority
-                        />
-                      </div>
+                {/* Gradient accent border on hover */}
+                <div 
+                  className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                  style={{ 
+                    background: 'var(--gradient)',
+                    padding: '2px',
+                    zIndex: -1,
+                    margin: '-2px'
+                  }}
+                />
 
-                      {/* Video Thumbnail */}
-                      <div 
-                        className="rounded-xl overflow-hidden aspect-video shadow-lg relative border"
-                        style={{ 
-                          backgroundColor: 'var(--color-surface)',
-                          borderColor: 'var(--color-border-subtle)'
-                        }}
-                      >
-                        <Image
-                          src={project.video}
-                          alt={`${project.title} - Demo Video Placeholder`}
-                          fill
-                          className="object-cover"
-                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="space-y-6">
+                <div className="p-6 lg:p-10">
+                  <div className="grid lg:grid-cols-[1.2fr,1fr] gap-10 items-start">
+                    {/* Left Column - Project Details */}
+                    <div className="space-y-6 order-2 lg:order-1">
                       <div>
                         <h3 
-                          className="text-3xl font-bold mb-4"
-                          style={{ color: 'var(--color-text)' }}
+                          className="text-3xl lg:text-4xl font-bold mb-3 bg-clip-text text-transparent leading-tight pb-1"
+                          style={{ backgroundImage: 'var(--gradient)' }}
                         >
                           {project.title}
                         </h3>
                         <p 
-                          className="text-lg mb-4 font-medium"
-                          style={{ color: 'var(--color-text-muted)' }}
+                          className="text-xl mb-4 font-semibold leading-relaxed"
+                          style={{ color: 'var(--color-text)' }}
                         >
                           {project.description}
                         </p>
                         <p 
-                          className="leading-relaxed"
-                          style={{ color: 'var(--color-text-subtle)' }}
+                          className="text-base leading-relaxed"
+                          style={{ color: 'var(--color-text-muted)' }}
                         >
                           {project.longDescription}
                         </p>
                       </div>
 
-                      <div>
+                      <div className="pt-2">
                         <h4 
-                          className="font-bold text-lg mb-3"
+                          className="font-bold text-lg mb-4 flex items-center gap-2"
                           style={{ color: 'var(--color-text)' }}
                         >
-                          Key Features:
+                          <span 
+                            className="w-1 h-6 rounded-full"
+                            style={{ background: 'var(--gradient)' }}
+                          />
+                          Key Features
                         </h4>
-                        <ul className="space-y-3">
+                        <ul className="space-y-2.5">
                           {project.features.map((feature, i) => (
-                            <li key={i} className="flex items-start">
+                            <li key={i} className="flex items-start group/item">
                               <span 
-                                className="w-2 h-2 rounded-full mr-3 mt-2 flex-shrink-0"
+                                className="w-1.5 h-1.5 rounded-full mr-3 mt-2 flex-shrink-0 group-hover/item:scale-125 transition-transform duration-200"
                                 style={{ backgroundColor: 'var(--color-primary)' }}
                               ></span>
-                              <span style={{ color: 'var(--color-text-subtle)' }}>{feature}</span>
+                              <span 
+                                className="text-sm leading-relaxed"
+                                style={{ color: 'var(--color-text-subtle)' }}
+                              >
+                                {feature}
+                              </span>
                             </li>
                           ))}
                         </ul>
                       </div>
 
-                      <div>
+                      <div className="pt-2">
                         <h4 
-                          className="font-bold text-lg mb-3"
+                          className="font-bold text-lg mb-4 flex items-center gap-2"
                           style={{ color: 'var(--color-text)' }}
                         >
-                          Technologies Used:
+                          <span 
+                            className="w-1 h-6 rounded-full"
+                            style={{ background: 'var(--gradient)' }}
+                          />
+                          Technologies Used
                         </h4>
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-2.5">
                           {project.technologies.map((tech) => (
                             <span
                               key={tech}
-                              className="px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 hover:scale-105"
+                              className="px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 hover:scale-105 hover:shadow-md border"
                               style={{ 
-                                backgroundColor: 'var(--color-surface)',
-                                color: 'var(--color-primary)'
+                                background: 'linear-gradient(135deg, var(--color-surface) 0%, color-mix(in srgb, var(--color-surface) 95%, var(--color-primary)) 100%)',
+                                color: 'var(--color-primary)',
+                                borderColor: 'var(--color-border)'
                               }}
                             >
                               {tech}
@@ -465,17 +455,41 @@ const Portfolio = () => {
                         </div>
                       </div>
 
-                      <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                      <div className="flex flex-col sm:flex-row gap-4 pt-6">
                         <a
                           href={project.live}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center justify-center px-6 py-3 text-white rounded-xl transition-all duration-200 font-medium shadow-lg hover:shadow-xl hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
-                          style={{ background: 'var(--gradient)' }}
+                          className="flex items-center justify-center px-8 py-4 text-white rounded-xl transition-all duration-200 font-semibold shadow-lg hover:shadow-xl hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 group/btn"
+                          style={{ 
+                            background: 'var(--gradient)',
+                            boxShadow: '0 10px 15px -3px var(--shadow), 0 4px 6px -4px var(--shadow)'
+                          }}
                         >
-                          <ExternalLink className="w-5 h-5 mr-2" />
+                          <ExternalLink className="w-5 h-5 mr-2 group-hover/btn:rotate-12 transition-transform duration-200" />
                           Live Demo
                         </a>
+                      </div>
+                    </div>
+
+                    {/* Right Column - Project Image */}
+                    <div className="order-1 lg:order-2">
+                      <div 
+                        className="rounded-xl overflow-hidden aspect-video shadow-2xl relative border-2 group-hover:scale-[1.02] transition-transform duration-300"
+                        style={{ 
+                          backgroundColor: 'var(--color-surface)',
+                          borderColor: 'var(--color-border)',
+                          boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)'
+                        }}
+                      >
+                        <Image
+                          src={project.image}
+                          alt={`${project.title} - Project Screenshot`}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
+                          priority
+                        />
                       </div>
                     </div>
                   </div>
@@ -484,9 +498,9 @@ const Portfolio = () => {
             ))}
           </div>
 
-          <div className="mt-12 text-center">
+          <div className="mt-16 text-center">
             <p 
-              className="text-lg"
+              className="text-lg font-medium"
               style={{ color: 'var(--color-text-subtle)' }}
             >
               More projects coming soon! I&apos;m always working on something new.

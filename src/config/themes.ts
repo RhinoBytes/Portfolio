@@ -59,8 +59,8 @@ const oceanTheme: Theme = {
   displayName: 'Ocean',
   mode: 'light',
   colors: {
-    background: '#FFFFFF',
-    surface: '#F8FAFC',
+    background: '#F8FAFB',
+    surface: '#FFFFFF',
     surfaceHover: '#F1F5F9',
     border: '#E2E8F0',
     borderSubtle: '#F1F5F9',
@@ -97,8 +97,8 @@ const sageTheme: Theme = {
   displayName: 'Sage',
   mode: 'light',
   colors: {
-    background: '#FEFEFE',
-    surface: '#F7F8F6',
+    background: '#F5F7F4',
+    surface: '#FFFFFF',
     surfaceHover: '#EEF0EC',
     border: '#E1E4DD',
     borderSubtle: '#EEF0EC',
