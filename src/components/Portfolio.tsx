@@ -477,21 +477,21 @@ const Portfolio = () => {
                         </div>
                       </div>
 
-                      <div className="flex flex-col sm:flex-row gap-4 pt-6">
-                        <a
-                          href={project.live}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center justify-center px-8 py-4 text-white rounded-xl transition-all duration-200 font-semibold shadow-lg hover:shadow-xl hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 group/btn"
-                          style={{ 
-                            background: 'var(--gradient)',
-                            boxShadow: '0 10px 15px -3px var(--shadow), 0 4px 6px -4px var(--shadow)'
-                          }}
-                        >
-                          <ExternalLink className="w-5 h-5 mr-2 group-hover/btn:rotate-12 transition-transform duration-200" />
-                          Live Demo
-                        </a>
-                      </div>
+                     <div className="flex flex-col sm:flex-row gap-4 pt-6 justify-center">
+  <a
+    href={project.live}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center justify-center px-8 py-4 text-white rounded-xl transition-all duration-200 font-semibold shadow-lg hover:shadow-xl hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 group/btn"
+    style={{ 
+      background: 'var(--gradient)',
+      boxShadow: '0 10px 15px -3px var(--shadow), 0 4px 6px -4px var(--shadow)'
+    }}
+  >
+    <ExternalLink className="w-5 h-5 mr-2 group-hover/btn:rotate-12 transition-transform duration-200" />
+    Live Demo
+  </a>
+</div>
                     </div>
                   </div>
                 </div>
